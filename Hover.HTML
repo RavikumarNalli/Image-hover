@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover & Event Listeners</title>
+    <style>
+        .hoverImage {
+            width: 200px;
+            height: 200px;
+            transition: opacity 0.3s;
+        }
+        .hoverImage:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<img src="./Screenshot (92).png" alt="Hover Image" class="hoverImage" id="hoverImage">
+
+<button id="eventButton">Click Me</button>
+
+<script>
+    const img = document.getElementById('hoverImage');
+    const button = document.getElementById('eventButton');
+
+    img.addEventListener('mouseenter', () => {
+        console.log("Image hovered over!");
+    });
+
+    button.addEventListener('click', () => {
+        console.log("Button clicked!");
+    });
+</script>
+
+</body>
+</html>
